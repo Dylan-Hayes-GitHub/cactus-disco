@@ -4,6 +4,7 @@ services:
     image: postgres
 
     environment:
+      POSTGRES_DB: discocactus
       POSTGRES_PASSWORD: reallystrongpassword
     ports:
       - "5432:5432"

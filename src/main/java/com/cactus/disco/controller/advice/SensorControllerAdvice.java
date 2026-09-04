@@ -27,13 +27,8 @@ public class SensorControllerAdvice {
 
     @ExceptionHandler( exception = {Exception.class})
     public ResponseEntity<ErrorDTO> handleServerError(Exception exception) {
-//        ErrorDTO errorDTO = ErrorDTO.builder()
-//                .errorMessage("Internal server error occurred")
-//                .errorCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
-//                .build();
-
         ErrorDTO errorDTO = ErrorDTO.builder()
-                .errorMessage(exception.getMessage())
+                .errorMessage("Internal server error occurred")
                 .errorCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
                 .build();
 

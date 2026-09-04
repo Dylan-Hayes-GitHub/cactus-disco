@@ -21,24 +21,25 @@ public class DateValidator implements ParamValidator {
 
         String fromDate = input.getOrDefault("from", null);
 
-        if(Objects.isNull(fromDate)) {
-            return generateErrorMessage(NO_DATE_PROVIDED, "from");
-        }
-
-        String toDate = input.getOrDefault("to", null);
-
-        if(Objects.isNull(toDate)) {
-            return generateErrorMessage(NO_DATE_PROVIDED, "to");
-        }
-
-        List<String> validationErrors = new ArrayList<>();
-
-        validateDate(fromDate, validationErrors);
-        validateDate(toDate, validationErrors);
-
-        if (CollectionUtils.isNotEmpty(validationErrors)) {
-            return String.join("\n", validationErrors);
-        }
+        //Wasnt able to get around to doing this fully
+//        if(Objects.isNull(fromDate)) {
+//            return generateErrorMessage(NO_DATE_PROVIDED, "from");
+//        }
+//
+//        String toDate = input.getOrDefault("to", null);
+//
+//        if(Objects.isNull(toDate)) {
+//            return generateErrorMessage(NO_DATE_PROVIDED, "to");
+//        }
+//
+//        List<String> validationErrors = new ArrayList<>();
+//
+//        validateDate(fromDate, validationErrors);
+//        validateDate(toDate, validationErrors);
+//
+//        if (CollectionUtils.isNotEmpty(validationErrors)) {
+//            return String.join("\n", validationErrors);
+//        }
 
         return null;
 

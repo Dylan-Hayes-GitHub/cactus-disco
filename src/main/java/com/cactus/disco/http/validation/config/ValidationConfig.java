@@ -22,8 +22,8 @@ public class ValidationConfig {
     }
 
     @Bean(name = "getAllSensorValidators")
-    public List<ParamValidator> getAllSensorValidators(DateValidator dateValidator) {
-        return List.of(dateValidator);
+    public List<ParamValidator> getAllSensorValidators(DateValidator dateValidator, MetricValidator metricValidator, MetricTypeValidator metricTypeValidator) {
+        return List.of(dateValidator, metricValidator, metricTypeValidator);
     }
 
 }

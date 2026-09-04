@@ -29,8 +29,7 @@ public class SensorController {
 
     @GetMapping
     public ResponseEntity<List<SensorMetricDTO>> getMetricForAllSensors(@RequestParam Map<String, String> allParams) {
-//        getRequestValidator.validateGetAllSensors(allParams);
-
+        getRequestValidator.validateGetAllSensors(allParams);
         List<SensorMetricDTO> sensorMetricDTOS = sensorService.findAllSensors(allParams);
 
         return ResponseEntity.ok().body(sensorMetricDTOS);
